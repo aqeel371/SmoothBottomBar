@@ -500,12 +500,12 @@ class SmoothBottomBar @JvmOverloads constructor(
         index: Int,
         canvas: Canvas
     ) {
-        /*
-        DrawableCompat.setTint(
-            item.icon,
-            if (index == itemActiveIndex) currentIconTint else itemIconTint
-        )
-*/
+        if (index != 3){
+            DrawableCompat.setTint(
+                item.icon,
+                if (index == itemActiveIndex) currentIconTint else itemIconTint
+            )
+        }
         item.icon.draw(canvas)
     }
 
